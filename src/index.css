@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+h1,h2{
+  text-align: center;
+  color: blue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.MuiAccordian-root{
+  color: rgb(110, 71, 71);
+  height: 20px;
+  padding: 10px;
+}
+
+.MuiCardContent-root{
+  color: blue;
+}
+.MuiSlider-root {
+  color: #20b2aa;
+}
