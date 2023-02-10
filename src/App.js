@@ -5,7 +5,7 @@ import{Todo} from "./components/todo/todo";
 
 
 function App(){
-  return (<Home/>);
+  //return (<Home/>);
   return (<Todo/>);
 }
 
