@@ -1,0 +1,12 @@
+.main {
+  background-color: "#e1bee7";
+  height: "80vh";
+  border: "10px" solid- black;
+}
+
+.todo {
+  color: purple;
+}
+.delete {
+  align-items: end;
+}

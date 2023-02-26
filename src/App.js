@@ -1,12 +1,21 @@
 import * as React from 'react';
 import './App.css';
 import {Home} from "./components/home/home";
+import {Header} from "./components/header/header";
 import{Todo} from "./components/todo/todo";
+import {HashRouter,Routes,Route} from "react-router-dom";
 
 
 function App(){
-  //return (<Home/>);
-  return (<Todo/>);
+  return (
+  <HashRouter>
+    <Header/>
+    <Routes>
+      <Route path = "/" element = {<Home/>}/>
+      <Route path = "/todo" element = {<Todo />}/>
+    </Routes>
+  </HashRouter>
+  );
 }
 
 export default App;
