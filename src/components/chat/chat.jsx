@@ -53,15 +53,15 @@ export const Chat = () => {
   function postMessage() {
     if (currentChat != null) {
       const message = {
-        chatId: currentChat.id, // required, must be an existing chat id
-        username: username, // use the entered username
-        text: inputMessage, // required
+        chatId: currentChat.id,
+        username: username,
+        text: inputMessage,
       };
 
       fetch("https://z36h06gqg7.execute-api.us-east-1.amazonaws.com/messages", {
         method: "PUT",
         headers: {
-          "Content-Type": "application/json", // tells REST that we will send the body data in JSON format
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(message),
       });
