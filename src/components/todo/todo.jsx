@@ -14,7 +14,6 @@ import { TodoActions } from "../../state/todo/todo.reducer";
 
 export const Todo = () => {
   const [input, setInput] = useState("");
-  //const [todos, setTodos] = useState([]);
   const { todoState, todoDispatch } = useContext(TodoContext);
 
   const onInput = (event) => {
@@ -23,7 +22,6 @@ export const Todo = () => {
   };
 
   const addTodo = () => {
-    //setTodos([...todos, { title: input, isComplete: false }]);
     todoDispatch({
       type: TodoActions.ADD,
       todo: { title: input, isComplete: false },
@@ -32,10 +30,6 @@ export const Todo = () => {
   };
 
   const toggleChecked = (todo) => {
-    //const newTodos = [...todos];
-    //const updatedTodo = newTodos.find((x) => x.title === todo.title);
-    //updatedTodo.isComplete = !todo.isComplete;
-    //setTodos(newTodos);
     todoDispatch({
       type: TodoActions.TOGGLE,
       todo,
@@ -43,14 +37,6 @@ export const Todo = () => {
   };
 
   const deleteTodo = (todo) => {
-    //const index = todos.indexOf(todo);
-    //const newTodos = [...todos];
-    //if (index !== -1) {
-    //setTodos([
-    // ...newTodos.slice(0, index),
-    // ...newTodos.slice(index + 1, newTodos.length),
-    //]);
-    // }
     todoDispatch({
       type: TodoActions.DELETE,
       todo,
