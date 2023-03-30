@@ -48,7 +48,11 @@ export const Home = () => {
   return (
     <div
       className="App"
-      style={{ backgroundImage: "url(" + purple + ")", height: "225vh" }}
+      style={{
+        backgroundImage: `url(${purple})`,
+        backgroundSize: "cover",
+        minHeight: "100vh",
+      }}
     >
       <br></br>
       <br></br>
@@ -74,9 +78,7 @@ export const Home = () => {
       </Card>
       <div>
         <br></br>
-        <Accordion
-          sx={{ backgroundColor: "#ede7f6", maxWidth: "800px", margin: "auto" }}
-        >
+        <Accordion sx={{ backgroundColor: "#ede7f6", margin: "auto" }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -126,20 +128,22 @@ export const Home = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          sx={{ backgroundColor: "#ede7f6", maxWidth: "800px", margin: "auto" }}
-        >
+        <Accordion sx={{ backgroundColor: "#ede7f6", margin: "auto" }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography sx={{ color: "purple", fontSize: "1.2rem" }}>
+            <Typography
+              sx={{ color: "purple", fontSize: "1.2rem", margin: "auto" }}
+            >
               Chocolate Crinkle Cookies
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography sx={{ color: "purple", fontSize: "1rem" }}>
+            <Typography
+              sx={{ color: "purple", fontSize: "1rem", margin: "auto" }}
+            >
               1 cup Mishpacha Flour
               <br />
               1/2 cup Gefen Cocoa Powder
@@ -181,15 +185,15 @@ export const Home = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          sx={{ backgroundColor: "#ede7f6", maxWidth: "800px", margin: "auto" }}
-        >
+        <Accordion sx={{ backgroundColor: "#ede7f6", margin: "auto" }}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3a-content"
             id="panel3a-header"
           >
-            <Typography sx={{ color: "purple", fontSize: "1.2rem" }}>
+            <Typography
+              sx={{ color: "purple", fontSize: "1.2rem", margin: "auto" }}
+            >
               Sprinkle Cookies
             </Typography>
           </AccordionSummary>
@@ -252,7 +256,11 @@ export const Home = () => {
       >
         Some yummy desserts!
       </Typography>
-      <ImageList sx={{ width: 1200, height: 450 }} cols={3} rowHeight={164}>
+      <ImageList
+        sx={{ width: 1200, height: 450, margin: "auto" }}
+        cols={3}
+        rowHeight={164}
+      >
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
