@@ -85,14 +85,16 @@ export const Home = () => {
             id="panel1a-header"
           >
             <Typography
-              sx={{ color: "purple", fontSize: "1.2rem" }}
+              sx={{ color: "purple", fontSize: "1.2rem", margin: "auto" }}
               className="First-Recipe"
             >
               Muddy Buddies
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography sx={{ color: "purple", fontSize: "1rem" }}>
+            <Typography
+              sx={{ color: "purple", fontSize: "1rem", margin: "auto" }}
+            >
               Ingredients
               <br />
               3 cups Rice Chex® cereal
