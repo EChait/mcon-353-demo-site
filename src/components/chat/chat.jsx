@@ -11,6 +11,7 @@ import {
   Popover,
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
+import purple from "../../images/purple.jpg";
 
 export const Chat = () => {
   const [chats, setChats] = useState([]);
@@ -129,7 +130,9 @@ export const Chat = () => {
   );
 
   return (
-    <Box>
+    <div style={{ backgroundImage: "url(" + purple + ")", height: "100vh" }}>
+      <br></br>
+      <br></br>
       <Container
         component="main"
         maxWidth="lg"
@@ -138,7 +141,6 @@ export const Chat = () => {
           border: "5px solid grey",
           borderRadius: "20px",
           padding: "20px",
-          marginTop: "50px",
         }}
       >
         <Typography
@@ -195,22 +197,27 @@ export const Chat = () => {
                     margin="dense"
                     value={newChatroomName}
                     onChange={(event) => setNewChatroomName(event.target.value)}
+                    InputLabelProps={{
+                      sx: {
+                        color: "text.secondary",
+                        "&.Mui-focused": { color: "purple" },
+                      },
+                    }}
                     sx={{
                       color: "black",
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          borderColor: "purple",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "purple",
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: "purple",
-                        },
+                      "& .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "purple",
                       },
-                      "& .MuiInputLabel-root": {
-                        color: "purple",
+                      "&:hover .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "purple",
                       },
+                      "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: "purple",
+                      },
+                      "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                        {
+                          borderColor: "purple",
+                        },
                     }}
                   />
                   <Button
@@ -298,7 +305,10 @@ export const Chat = () => {
                         marginBottom: "5px",
                       }}
                     >
-                      <Typography component="span" sx={{ fontWeight: "bold" }}>
+                      <Typography
+                        component="span"
+                        sx={{ fontWeight: "bold", display: "inline-block" }}
+                      >
                         {message.username}:
                       </Typography>{" "}
                       {message.text}
@@ -377,6 +387,6 @@ export const Chat = () => {
           </Box>
         </Box>
       </Container>
-    </Box>
+    </div>
   );
 };

@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./home.css";
-import beach from "../../images/beach.jpg"; // gives image path;
+import beach from "../../images/beach.jpg";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -11,20 +11,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-
-const card = (
-  <React.Fragment>
-    <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-        Quote of the Day
-      </Typography>
-      <Typography sx={{ mb: 1.5 }} color="text.secondary">
-        The best and most beautiful things in the world cannot be seen or even
-        touched <br />- they must be felt with the heart.
-      </Typography>
-    </CardContent>
-  </React.Fragment>
-);
+import purple from "../../images/purple.jpg";
 
 const itemData = [
   {
@@ -59,27 +46,51 @@ const itemData = [
 
 export const Home = () => {
   return (
-    <div className="App">
-      <h1>Hello! Welcome to my Home Page:)</h1>
-      <img src={beach} alt="beach" style={{ border: "10px" }} />
-      <h2>
-        My name is Elisheva Chait. <br />I am completing my last semester for a
-        BA in Computer Science.
-        <br /> I live in Queens, NY and enjoy baking.
-        <br />
-        Here are 3 easy recipes!
-      </h2>
+    <div
+      className="App"
+      style={{ backgroundImage: "url(" + purple + ")", height: "225vh" }}
+    >
+      <br></br>
+      <br></br>
+      <Card
+        sx={{
+          maxWidth: 500,
+          backgroundColor: "#ede7f6",
+          borderRadius: 2,
+          boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)",
+          margin: "auto",
+        }}
+      >
+        <CardContent>
+          <Typography sx={{ fontSize: 40 }} color="purple" gutterBottom>
+            Hello! <br></br>Welcome to my Home Page:)
+          </Typography>
+          <Typography sx={{ mb: 1.5 }} color="purple">
+            My name is Elisheva Chait. I am completing my last semester for a BA
+            in Computer Science. I live in Queens, NY and enjoy baking. Here are
+            3 easy recipes!
+          </Typography>
+        </CardContent>
+      </Card>
       <div>
-        <Accordion className="Accordian">
+        <br></br>
+        <Accordion
+          sx={{ backgroundColor: "#ede7f6", maxWidth: "800px", margin: "auto" }}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography className="First-Recipe">Muddy Buddies</Typography>
+            <Typography
+              sx={{ color: "purple", fontSize: "1.2rem" }}
+              className="First-Recipe"
+            >
+              Muddy Buddies
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
+            <Typography sx={{ color: "purple", fontSize: "1rem" }}>
               Ingredients
               <br />
               3 cups Rice Chex® cereal
@@ -115,16 +126,20 @@ export const Home = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion
+          sx={{ backgroundColor: "#ede7f6", maxWidth: "800px", margin: "auto" }}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-            <Typography>Chocolate Crinkle Cookies</Typography>
+            <Typography sx={{ color: "purple", fontSize: "1.2rem" }}>
+              Chocolate Crinkle Cookies
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
+            <Typography sx={{ color: "purple", fontSize: "1rem" }}>
               1 cup Mishpacha Flour
               <br />
               1/2 cup Gefen Cocoa Powder
@@ -154,7 +169,7 @@ export const Home = () => {
               Form dough into a ball and cover with plastic wrap. Refrigerate
               for at least two hours and up to 24 hours.
               <br />
-              Preheat oven to 350 degrees Fahrenheit.
+              Preheat oven to 350 degrees
               <br />
               Unwrap the dough and form into one-inch balls. Pour powdered sugar
               onto a plate. Roll balls in powdered sugar until fully coated.
@@ -166,16 +181,20 @@ export const Home = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion>
+        <Accordion
+          sx={{ backgroundColor: "#ede7f6", maxWidth: "800px", margin: "auto" }}
+        >
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel3a-content"
             id="panel3a-header"
           >
-            <Typography>Sprinkle Cookies</Typography>
+            <Typography sx={{ color: "purple", fontSize: "1.2rem" }}>
+              Sprinkle Cookies
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
+            <Typography sx={{ color: "purple", fontSize: "1rem" }}>
               4 sticks margarine
               <br />
               1 and 1/2 cups sugar
@@ -206,10 +225,33 @@ export const Home = () => {
           </AccordionDetails>
         </Accordion>
       </div>
-      <Box sx={{ minWidth: 275 }}>
-        <Card variant="outlined">{card}</Card>
-      </Box>
-      <h1>Some yummy desserts!</h1>
+      <br></br>
+      <br></br>
+      <Card
+        sx={{
+          maxWidth: 500,
+          backgroundColor: "#ede7f6",
+          borderRadius: 2,
+          boxShadow: "0px 0px 4px rgba(0, 0, 0, 0.25)",
+          margin: "auto",
+        }}
+      >
+        <CardContent>
+          <Typography sx={{ fontSize: 14 }} color="purple" gutterBottom>
+            Quote of the Day
+          </Typography>
+          <Typography sx={{ mb: 1.5 }} color="purple">
+            The best and most beautiful things in the world cannot be seen or
+            even touched <br />- they must be felt with the heart.
+          </Typography>
+        </CardContent>
+      </Card>
+      <br></br>
+      <Typography
+        sx={{ color: "purple", fontSize: "35px", fontWeight: "bold" }}
+      >
+        Some yummy desserts!
+      </Typography>
       <ImageList sx={{ width: 1200, height: 450 }} cols={3} rowHeight={164}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>

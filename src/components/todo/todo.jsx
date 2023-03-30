@@ -8,7 +8,7 @@ import Box from "@mui/material/Box";
 import AddIcon from "@mui/icons-material/Add";
 import Checkbox from "@mui/material/Checkbox";
 import { Divider } from "@mui/material";
-import purple from "../../images/purple.jpg"; // gives image path;
+import purple from "../../images/purple.jpg";
 import { TodoContext } from "../../state/todo/todo-context";
 import { TodoActions } from "../../state/todo/todo.reducer";
 
@@ -45,12 +45,18 @@ export const Todo = () => {
 
   return (
     <>
-      <div className="page" style={{ backgroundImage: "url(" + purple + ")" }}>
+      <div style={{ backgroundImage: "url(" + purple + ")", height: "100vh" }}>
+        <br></br>
+        <br></br>
         <Container
           component="main"
           maxWidth="sm"
-          sx={{ bgcolor: "#ede7f6", border: "5px grey", height: "1000px" }}
-          style={{ border: "1px solid rgba(0, 0, 0, 0.05)" }}
+          sx={{
+            bgcolor: "#ede7f6",
+            border: "5px solid grey",
+            borderRadius: "20px",
+            padding: "20px",
+          }}
         >
           <Typography
             className="Todo"
@@ -76,13 +82,40 @@ export const Todo = () => {
               id="standard-basic"
               label="Your Todo Item"
               variant="standard"
-              sx={{ alignItems: "center", color: "purple" }}
+              InputLabelProps={{
+                sx: {
+                  color: "text.secondary",
+                  "&.Mui-focused": { color: "purple" },
+                },
+              }}
+              sx={{
+                alignItems: "center",
+                color: "purple",
+                "& .MuiInput-underline:before": {
+                  borderBottomColor: "purple",
+                },
+                "& .MuiInput-underline:after": {
+                  borderBottomColor: "purple",
+                },
+                "& .MuiInputBase-input": {
+                  color: "purple",
+                },
+                "&:hover .MuiInput-underline:before": {
+                  borderBottomColor: "purple",
+                },
+                "&.Mui-focused .MuiInput-underline:before": {
+                  borderBottomColor: "purple",
+                },
+                "&.Mui-focused .MuiInput-underline:after": {
+                  borderBottomColor: "purple",
+                },
+              }}
               style={{ alignItems: "center" }}
             />
             <AddIcon fontSize="large" onClick={addTodo} />
           </Box>
           {todoState.todos.map((todo) => (
-            <p key={todo.tile}>
+            <p key={todo.title}>
               <Checkbox
                 color="success"
                 checked={todo.isComplete}

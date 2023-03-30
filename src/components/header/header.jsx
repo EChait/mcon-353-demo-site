@@ -46,10 +46,10 @@ export function Header() {
   return (
     <AppBar
       position="static"
-      style={{
-        color: "blue",
-        backgroundImage:
-          "url(https://www.harmony-hunter.com/wp-content/uploads/2017/03/cool-light-blue-backgrounds-21.jpg)",
+      sx={{
+        bgcolor: "#ede7f6",
+        color: "purple",
+        borderBottom: "5px solid grey",
       }}
     >
       <Container maxWidth="xl">
@@ -114,7 +114,7 @@ export function Header() {
               fontFamily: "monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
-              color: "inherit",
+              color: "purple",
               textDecoration: "none",
             }}
           >
@@ -123,14 +123,14 @@ export function Header() {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: "none", md: "flex", color: "blue" },
+              display: { xs: "none", md: "flex", color: "purple" },
             }}
           >
             {pages.map((page) => (
               <Button
                 key={page.name}
                 onClick={() => handleCloseNavMenu(page)}
-                sx={{ my: 2, color: "blue", display: "block" }}
+                sx={{ my: 2, color: "purple", display: "block" }}
               >
                 {page.name}
               </Button>
