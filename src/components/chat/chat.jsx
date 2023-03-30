@@ -130,7 +130,13 @@ export const Chat = () => {
   );
 
   return (
-    <div style={{ backgroundImage: "url(" + purple + ")", height: "100vh" }}>
+    <div
+      style={{
+        backgroundImage: `url(${purple})`,
+        backgroundSize: "cover",
+        minHeight: "100vh",
+      }}
+    >
       <br></br>
       <br></br>
       <Container
